@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>textextraction</groupId>
+  <artifactId>pdf-parser</artifactId>
+  <versioning>
+    <release>0.1</release>
+    <versions>
+      <version>0.1</version>
+    </versions>
+    <lastUpdated>20201125163857</lastUpdated>
+  </versioning>
+</metadata>
