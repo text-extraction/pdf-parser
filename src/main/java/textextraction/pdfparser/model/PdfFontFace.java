@@ -11,11 +11,11 @@ public class PdfFontFace extends FontFace {
   /**
    * Creates a new font face.
    * 
-   * @param font     The font of the font face.
-   * @param fontSize The font size of this font face.
+   * @param font The font of the font face.
+   * @param size The font size of this font face.
    */
-  public PdfFontFace(PdfFont font, float fontSize) {
-    super(font, fontSize);
+  public PdfFontFace(PdfFont font, float size) {
+    super(font, size);
   }
 
   // ==============================================================================================

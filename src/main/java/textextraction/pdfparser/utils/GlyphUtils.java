@@ -20,10 +20,8 @@ public class GlyphUtils {
   /**
    * The additional glyphs.
    */
-  protected static final GlyphList additionalGlyphs;
-  static {
-    additionalGlyphs = readAdditionalGlyphs("org/apache/pdfbox/resources/glyphlist/additional.txt");
-  }
+  protected static final GlyphList additionalGlyphs =
+          readAdditionalGlyphs("org/apache/pdfbox/resources/glyphlist/additional.txt");
 
   // ==============================================================================================
 

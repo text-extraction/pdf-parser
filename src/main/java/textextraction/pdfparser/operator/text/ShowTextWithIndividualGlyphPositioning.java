@@ -46,7 +46,8 @@ public class ShowTextWithIndividualGlyphPositioning extends OperatorProcessor {
         float tj = ((COSNumber) obj).floatValue();
 
         // calculate the combined displacements
-        float tx, ty;
+        float tx;
+        float ty;
         if (isVertical) {
           tx = 0;
           ty = -tj / 1000 * fontSize;

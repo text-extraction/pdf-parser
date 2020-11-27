@@ -15,7 +15,7 @@ import textextraction.pdfparser.model.PdfPage;
  *
  * @author Claudius Korzen
  */
-public class SetStrokingDeviceRGBColor extends SetStrokingColor {
+public class SetStrokingDeviceRgbColor extends SetStrokingColor {
   @Override
   public void process(PdfDocument pdf, PdfPage page, Operator op, List<COSBase> args)
           throws IOException {

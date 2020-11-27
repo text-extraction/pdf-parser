@@ -38,15 +38,15 @@ import textextraction.pdfparser.operator.OperatorProcessor;
 import textextraction.pdfparser.operator.color.SetNonStrokingColor;
 import textextraction.pdfparser.operator.color.SetNonStrokingColorN;
 import textextraction.pdfparser.operator.color.SetNonStrokingColorSpace;
-import textextraction.pdfparser.operator.color.SetNonStrokingDeviceCMYKColor;
+import textextraction.pdfparser.operator.color.SetNonStrokingDeviceCmykColor;
 import textextraction.pdfparser.operator.color.SetNonStrokingDeviceGrayColor;
-import textextraction.pdfparser.operator.color.SetNonStrokingDeviceRGBColor;
+import textextraction.pdfparser.operator.color.SetNonStrokingDeviceRgbColor;
 import textextraction.pdfparser.operator.color.SetStrokingColor;
 import textextraction.pdfparser.operator.color.SetStrokingColorN;
 import textextraction.pdfparser.operator.color.SetStrokingColorSpace;
-import textextraction.pdfparser.operator.color.SetStrokingDeviceCMYKColor;
+import textextraction.pdfparser.operator.color.SetStrokingDeviceCmykColor;
 import textextraction.pdfparser.operator.color.SetStrokingDeviceGrayColor;
-import textextraction.pdfparser.operator.color.SetStrokingDeviceRGBColor;
+import textextraction.pdfparser.operator.color.SetStrokingDeviceRgbColor;
 import textextraction.pdfparser.operator.graphic.AppendRectangleToPath;
 import textextraction.pdfparser.operator.graphic.BeginInlineImage;
 import textextraction.pdfparser.operator.graphic.ClipEvenOddRule;
@@ -186,7 +186,7 @@ public class PdfParser {
   protected int numShapes;
 
   /**
-   * The precision to use on rounding floating numbers
+   * The precision to use on rounding floating numbers.
    */
   protected int floatingPointPrecision;
 
@@ -243,15 +243,15 @@ public class PdfParser {
     registerOperatorProcessor(new SetNonStrokingColor()); // sc
     registerOperatorProcessor(new SetNonStrokingColorN()); // scn
     registerOperatorProcessor(new SetNonStrokingColorSpace()); // cs
-    registerOperatorProcessor(new SetNonStrokingDeviceCMYKColor()); // k
+    registerOperatorProcessor(new SetNonStrokingDeviceCmykColor()); // k
     registerOperatorProcessor(new SetNonStrokingDeviceGrayColor()); // g
-    registerOperatorProcessor(new SetNonStrokingDeviceRGBColor()); // rg
+    registerOperatorProcessor(new SetNonStrokingDeviceRgbColor()); // rg
     registerOperatorProcessor(new SetStrokingColor()); // SC
     registerOperatorProcessor(new SetStrokingColorN()); // SCN
     registerOperatorProcessor(new SetStrokingColorSpace()); // CS
-    registerOperatorProcessor(new SetStrokingDeviceCMYKColor()); // K
+    registerOperatorProcessor(new SetStrokingDeviceCmykColor()); // K
     registerOperatorProcessor(new SetStrokingDeviceGrayColor()); // G
-    registerOperatorProcessor(new SetStrokingDeviceRGBColor()); // RG
+    registerOperatorProcessor(new SetStrokingDeviceRgbColor()); // RG
 
     this.graphicsStack = new Stack<PDGraphicsState>();
     this.linePath = new GeneralPath();
@@ -542,7 +542,7 @@ public class PdfParser {
    * @param rect the PDRectangle to transform
    * @return the transformed coordinates as a GeneralPath
    */
-  public GeneralPath transformedPDRectanglePath(PDRectangle rect) {
+  public GeneralPath transformedPdRectanglePath(PDRectangle rect) {
     float x1 = rect.getLowerLeftX();
     float y1 = rect.getLowerLeftY();
     float x2 = rect.getUpperRightX();
@@ -692,7 +692,7 @@ public class PdfParser {
   public void transform(Point p) {
     transform(p, getCurrentTransformationMatrix());
   }
-  
+
   /**
    * Transforms the given coordinates by applying the given matrix.
    * 

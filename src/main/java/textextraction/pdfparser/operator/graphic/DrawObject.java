@@ -64,7 +64,7 @@ public class DrawObject extends OperatorProcessor {
       if (form.getBBox() != null) {
         PDGraphicsState graphicsState = this.parser.getGraphicsState();
         PDRectangle bbox = form.getBBox();
-        GeneralPath bboxPath = this.parser.transformedPDRectanglePath(bbox);
+        GeneralPath bboxPath = this.parser.transformedPdRectanglePath(bbox);
         graphicsState.intersectClippingPath(bboxPath);
       }
 

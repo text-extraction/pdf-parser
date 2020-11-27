@@ -23,7 +23,7 @@ public class FillNonZeroRule extends OperatorProcessor {
     // Use COSFloat, because COSInteger is private.
     args.add(new COSFloat(Path2D.WIND_NON_ZERO));
     // Stroke path
-    this.parser.processOperator(pdf, page, "S", args); 
+    this.parser.processOperator(pdf, page, "S", args);
   }
 
   @Override

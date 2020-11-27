@@ -140,7 +140,8 @@ public class ShowText extends OperatorProcessor {
         Vector w = font.getDisplacement(code);
 
         // Calculate the displacements.
-        float tx, ty;
+        float tx;
+        float ty;
         if (font.isVertical()) {
           tx = 0;
           ty = w.getY() * fontSize + charSpacing + wordSpacing;

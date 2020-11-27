@@ -37,7 +37,7 @@ public class PdfColorManager {
    * @return The {@link PdfColor} object corresponding to the given color.
    */
   public static PdfColor getOrCreatePdfColor(PDColor color, PDColorSpace colorSpace) {
-    return getOrCreatePdfColor(toRGB(color, colorSpace));
+    return getOrCreatePdfColor(toRgb(color, colorSpace));
   }
 
   /**
@@ -63,7 +63,7 @@ public class PdfColorManager {
     PdfColor newColor = new PdfColor();
     newColor.setId("color-" + knownColors.size());
     newColor.setName(computeColorName(rgb));
-    newColor.setRGB(rgb);
+    newColor.setRgb(rgb);
 
     // Add the new color to the map of known colors.
     knownColors.put(newColor.getName(), newColor);
@@ -122,7 +122,7 @@ public class PdfColorManager {
    * 
    * @return An array of length 3, containing the R, G and B values.
    */
-  protected static int[] toRGB(PDColor color, PDColorSpace colorSpace) {
+  protected static int[] toRgb(PDColor color, PDColorSpace colorSpace) {
     if (color == null || colorSpace == null) {
       return null;
     }

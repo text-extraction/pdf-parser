@@ -22,8 +22,8 @@ public abstract class OperatorProcessor {
   // ==============================================================================================
 
   /**
-   * Sets the PDF parser, so that this operator processor can access e.g., the
-   * current resources stack.
+   * Sets the PDF parser, so that this operator processor can access e.g., the current resources
+   * stack.
    * 
    * @param parser The PDF parser.
    */
@@ -42,7 +42,8 @@ public abstract class OperatorProcessor {
    * @param args The operands to use when processing
    * @throws IOException if the operator cannot be processed
    */
-  public abstract void process(PdfDocument pdf, PdfPage page, Operator op, List<COSBase> args) throws IOException;
+  public abstract void process(PdfDocument pdf, PdfPage page, Operator op, List<COSBase> args)
+          throws IOException;
 
   /**
    * Returns the name of this operator, e.g. "BI".

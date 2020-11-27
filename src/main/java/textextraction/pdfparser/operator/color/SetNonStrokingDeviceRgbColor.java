@@ -11,23 +11,23 @@ import textextraction.pdfparser.model.PdfDocument;
 import textextraction.pdfparser.model.PdfPage;
 
 /**
- * k: Set the non-stroking color space to DeviceCMYK and set the color to use for non-stroking
+ * rg: Set the non-stroking color space to DeviceRGB and set the color to use for non-stroking
  * operations.
- *
+ * 
  * @author Claudius Korzen
  */
-public class SetNonStrokingDeviceCMYKColor extends SetNonStrokingColor {
+public class SetNonStrokingDeviceRgbColor extends SetNonStrokingColor {
   @Override
   public void process(PdfDocument pdf, PdfPage page, Operator op, List<COSBase> args)
           throws IOException {
     PDResources resources = this.parser.getResources();
-    PDColorSpace cs = resources.getColorSpace(COSName.DEVICECMYK);
+    PDColorSpace cs = resources.getColorSpace(COSName.DEVICERGB);
     this.parser.getGraphicsState().setNonStrokingColorSpace(cs);
     super.process(pdf, page, op, args);
   }
 
   @Override
   public String getName() {
-    return "k";
+    return "rg";
   }
 }

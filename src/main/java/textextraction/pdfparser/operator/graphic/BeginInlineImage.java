@@ -50,7 +50,7 @@ public class BeginInlineImage extends OperatorProcessor {
 
     // Compute the position of the image. TODO: Use engine.transform() instead.
     Matrix ctm = this.parser.getCurrentTransformationMatrix();
-    
+
     int precision = this.parser.getFloatingPointPrecision();
     float minX = MathUtils.round(ctm.getTranslateX(), precision);
     float minY = MathUtils.round(ctm.getTranslateY(), precision);
