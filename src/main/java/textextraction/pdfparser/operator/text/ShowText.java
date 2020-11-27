@@ -5,6 +5,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+
 import org.apache.fontbox.afm.CharMetric;
 import org.apache.fontbox.cff.CFFType1Font;
 import org.apache.fontbox.cff.Type1CharString;
@@ -28,6 +29,7 @@ import org.apache.pdfbox.pdmodel.graphics.state.PDGraphicsState;
 import org.apache.pdfbox.pdmodel.graphics.state.PDTextState;
 import org.apache.pdfbox.util.Matrix;
 import org.apache.pdfbox.util.Vector;
+
 import textextraction.common.models.Point;
 import textextraction.common.models.Rectangle;
 import textextraction.common.utils.MathUtils;

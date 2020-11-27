@@ -5,12 +5,14 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
+
 import org.apache.fontbox.afm.AFMParser;
 import org.apache.fontbox.afm.CharMetric;
 import org.apache.fontbox.afm.FontMetrics;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
+
 import textextraction.common.utils.PathUtils;
 
 // TODO: This doesn't work, because the afm files are missing.

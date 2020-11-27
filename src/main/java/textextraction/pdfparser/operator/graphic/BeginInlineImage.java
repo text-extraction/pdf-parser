@@ -2,6 +2,7 @@ package textextraction.pdfparser.operator.graphic;
 
 import java.io.IOException;
 import java.util.List;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.pdfbox.contentstream.operator.Operator;
@@ -11,6 +12,7 @@ import org.apache.pdfbox.cos.COSName;
 import org.apache.pdfbox.pdmodel.graphics.image.PDImage;
 import org.apache.pdfbox.pdmodel.graphics.image.PDInlineImage;
 import org.apache.pdfbox.util.Matrix;
+
 import textextraction.common.utils.MathUtils;
 import textextraction.pdfparser.model.PdfColor;
 import textextraction.pdfparser.model.PdfDocument;

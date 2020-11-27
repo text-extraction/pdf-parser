@@ -2,8 +2,10 @@ package textextraction.pdfparser.operator;
 
 import java.io.IOException;
 import java.util.List;
+
 import org.apache.pdfbox.contentstream.operator.Operator;
 import org.apache.pdfbox.cos.COSBase;
+
 import textextraction.pdfparser.PdfParser;
 import textextraction.pdfparser.model.PdfDocument;
 import textextraction.pdfparser.model.PdfPage;

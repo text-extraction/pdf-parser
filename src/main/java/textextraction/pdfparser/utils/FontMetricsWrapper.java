@@ -2,6 +2,7 @@ package textextraction.pdfparser.utils;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import org.apache.fontbox.afm.CharMetric;
 import org.apache.fontbox.afm.FontMetrics;
 

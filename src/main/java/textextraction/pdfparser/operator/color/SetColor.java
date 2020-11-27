@@ -2,6 +2,7 @@ package textextraction.pdfparser.operator.color;
 
 import java.io.IOException;
 import java.util.List;
+
 import org.apache.pdfbox.contentstream.operator.MissingOperandException;
 import org.apache.pdfbox.contentstream.operator.Operator;
 import org.apache.pdfbox.cos.COSArray;
@@ -9,6 +10,7 @@ import org.apache.pdfbox.cos.COSBase;
 import org.apache.pdfbox.pdmodel.graphics.color.PDColor;
 import org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace;
 import org.apache.pdfbox.pdmodel.graphics.color.PDDeviceColorSpace;
+
 import textextraction.pdfparser.model.PdfDocument;
 import textextraction.pdfparser.model.PdfPage;
 import textextraction.pdfparser.operator.OperatorProcessor;

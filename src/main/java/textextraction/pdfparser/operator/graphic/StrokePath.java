@@ -5,11 +5,13 @@ import java.awt.geom.PathIterator;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
+
 import org.apache.pdfbox.contentstream.operator.Operator;
 import org.apache.pdfbox.cos.COSBase;
 import org.apache.pdfbox.cos.COSNumber;
 import org.apache.pdfbox.pdmodel.graphics.color.PDColor;
 import org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace;
+
 import textextraction.common.utils.MathUtils;
 import textextraction.pdfparser.model.PdfColor;
 import textextraction.pdfparser.model.PdfDocument;

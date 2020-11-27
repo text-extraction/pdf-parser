@@ -2,6 +2,7 @@ package textextraction.pdfparser.model;
 
 import java.io.File;
 import java.nio.file.Path;
+
 import textextraction.common.models.Document;
 
 /**

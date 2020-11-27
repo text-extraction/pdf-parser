@@ -3,6 +3,7 @@ package textextraction.pdfparser.operator.text;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.apache.pdfbox.contentstream.operator.MissingOperandException;
 import org.apache.pdfbox.contentstream.operator.Operator;
 import org.apache.pdfbox.cos.COSArray;
@@ -11,6 +12,7 @@ import org.apache.pdfbox.cos.COSNumber;
 import org.apache.pdfbox.cos.COSString;
 import org.apache.pdfbox.pdmodel.graphics.state.PDTextState;
 import org.apache.pdfbox.util.Matrix;
+
 import textextraction.pdfparser.model.PdfDocument;
 import textextraction.pdfparser.model.PdfPage;
 import textextraction.pdfparser.operator.OperatorProcessor;

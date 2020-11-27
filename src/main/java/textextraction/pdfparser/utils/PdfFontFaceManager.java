@@ -2,8 +2,10 @@ package textextraction.pdfparser.utils;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
 import textextraction.pdfparser.model.PdfFont;
 import textextraction.pdfparser.model.PdfFontFace;
 

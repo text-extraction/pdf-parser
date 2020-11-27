@@ -1,6 +1,7 @@
 package textextraction.pdfparser.model;
 
 import java.util.Arrays;
+
 import textextraction.common.models.Color;
 
 /**
