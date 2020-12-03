@@ -37,13 +37,6 @@ public class PdfCharacter extends Character {
   // ==============================================================================================
 
   @Override
-  public String toString() {
-    return "PdfCharacter(" + getText() + ", " + getPosition() + ")";
-  }
-
-  // ==============================================================================================
-
-  @Override
   public boolean equals(Object other) {
     if (other instanceof PdfCharacter) {
       PdfCharacter otherCharacter = (PdfCharacter) other;

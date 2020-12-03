@@ -15,11 +15,6 @@ public class PdfFont extends Font {
   protected boolean isType3Font;
 
   /**
-   * The (normalized) name of this font.
-   */
-  protected String normalizedName;
-
-  /**
    * The base name of this font.
    */
   protected String basename;
@@ -28,28 +23,6 @@ public class PdfFont extends Font {
    * The name of the font family.
    */
   protected String fontFamilyName;
-
-  // ==============================================================================================
-
-  /**
-   * Returns the normalized name of this font, that is: the lower cased name of the font as it
-   * appears in the document without the substring till the "+" sign. For example, if the name of
-   * the font is "FPVPVX+NimbusRomNo9L-Medi", the normalized name is "nimbusromno9l-medi".
-   * 
-   * @return The normalized name of this font.
-   */
-  public String getNormalizedName() {
-    return this.normalizedName;
-  }
-
-  /**
-   * Sets the normalized name of this font.
-   * 
-   * @param name The normalized name of this font.
-   */
-  public void setNormalizedName(String name) {
-    this.normalizedName = name;
-  }
 
   // ==============================================================================================
 
@@ -118,21 +91,12 @@ public class PdfFont extends Font {
   // ==============================================================================================
 
   @Override
-  public String toString() {
-    return "PdfFont(" + this.normalizedName + ", " + this.basename + ", " + this.fontFamilyName
-            + ", id: " + this.id + ", isType3: " + this.isType3Font + ", isBold: " + this.isBold
-            + ", isItalic: " + this.isItalic() + ")";
-  }
-
-  // ==============================================================================================
-
-  @Override
   public boolean equals(Object other) {
     if (other instanceof PdfFont) {
       PdfFont otherFont = (PdfFont) other;
 
       EqualsBuilder builder = new EqualsBuilder();
-      builder.append(getNormalizedName(), otherFont.getNormalizedName());
+      builder.append(getName(), otherFont.getName());
       builder.append(getBaseName(), otherFont.getBaseName());
       builder.append(getFontFamilyName(), otherFont.getFontFamilyName());
       builder.append(isBold(), otherFont.isBold());
@@ -147,7 +111,7 @@ public class PdfFont extends Font {
   @Override
   public int hashCode() {
     HashCodeBuilder builder = new HashCodeBuilder();
-    builder.append(getNormalizedName());
+    builder.append(getName());
     builder.append(getBaseName());
     builder.append(getFontFamilyName());
     builder.append(isBold());

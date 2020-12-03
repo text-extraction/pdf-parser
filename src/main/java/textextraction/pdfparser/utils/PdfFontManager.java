@@ -59,14 +59,14 @@ public class PdfFontManager {
     // The font is not known. Create a new font.
     PdfFont newFont = new PdfFont();
     newFont.setId("font-" + knownFonts.size());
-    newFont.setNormalizedName(computeNormalizedName(font));
+    newFont.setName(computeNormalizedName(font));
     newFont.setBasename(computeBasename(newFont));
     newFont.setIsBold(computeIsBold(newFont));
     newFont.setIsItalic(computeIsItalic(newFont));
     newFont.setIsType3Font(computeIsType3Font(font));
 
     // Add the new font to the map of known fonts.
-    knownFonts.put(newFont.getNormalizedName(), newFont);
+    knownFonts.put(newFont.getName(), newFont);
     LOG.debug("A new font was registered: " + newFont);
 
     return newFont;
@@ -194,7 +194,7 @@ public class PdfFontManager {
    */
   public static String computeBasename(PdfFont font) {
     // Compute the basename from the name: "LTSLOS+NimbusSanL-Bold"
-    String basename = font.getNormalizedName();
+    String basename = font.getName();
 
     // Eliminate trailing characters starting at the "-": nimbussanl
     int indexMinus = basename.indexOf("-");
@@ -225,7 +225,7 @@ public class PdfFontManager {
    * @return True, if the given font represents a bold-faced font, false otherwise.
    */
   public static boolean computeIsBold(PdfFont font) {
-    String fontName = font.getNormalizedName();
+    String fontName = font.getName();
 
     if (fontName != null) {
       int lengthBefore = fontName.length();
@@ -244,7 +244,7 @@ public class PdfFontManager {
    * @return True, if the given font represents an italic-faced font.
    */
   public static boolean computeIsItalic(PdfFont font) {
-    String fontName = font.getNormalizedName();
+    String fontName = font.getName();
 
     if (fontName != null) {
       int lengthBefore = fontName.length();

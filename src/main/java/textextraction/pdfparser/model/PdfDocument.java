@@ -35,11 +35,4 @@ public class PdfDocument extends Document {
   public PdfDocument(Path path) {
     super(path);
   }
-
-  // ==============================================================================================
-
-  @Override
-  public String toString() {
-    return "PdfDocument(" + this.path + ")";
-  }
 }

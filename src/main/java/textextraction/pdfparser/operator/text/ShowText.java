@@ -207,22 +207,10 @@ public class ShowText extends OperatorProcessor {
       box = pdfBoxBoundBox;
     }
 
-    // In some pdfs, fontsize is equal to '1.0' for every character.
-    // In this case, multiplying it with the scaling factor gives the correct
-    // fontsize. In other pdfs, the fontsizes are correct and multiplying it
-    // with the scaling factor would result in too large fontsizes.
-    // Observation: In the latter case, fontsize and scale factor are equal,
-    // so multiply the fontsize and the scale factor only when they aren't
-    // equal.
-    // TODO: Verify, that this is a correct observation.
-    PDGraphicsState graphicsState = this.parser.getGraphicsState();
-    float fontSize = graphicsState.getTextState().getFontSize();
-    // float scaleFactorX = trm.getScalingFactorX();
-
-    // TODO: Check if this approach is correct
-    // if (fontSize != scaleFactorX) {
-    // fontSize *= scaleFactorX;
-    // }
+    // Compute the fontsize. 
+    // See https://stackoverflow.com/questions/48010235/pdf-specification-get-font-size-in-points
+    // for an explanation why we can't use engine.getGraphicsState().getTextState().getFontSize().
+    float fontSize = trm.getScalingFactorX();
 
     // Use our additional glyph list for Unicode mapping
     GlyphList additionalGlyphs = GlyphUtils.getAdditionalGlyphs();
@@ -281,6 +269,7 @@ public class ShowText extends OperatorProcessor {
     int precision = this.parser.getFloatingPointPrecision();
 
     // Create the color.
+    PDGraphicsState graphicsState = this.parser.getGraphicsState();
     PDColor pdColor = graphicsState.getNonStrokingColor();
     PDColorSpace pdColorSpace = graphicsState.getNonStrokingColorSpace();
     PdfColor color = PdfColorManager.getOrCreatePdfColor(pdColor, pdColorSpace);

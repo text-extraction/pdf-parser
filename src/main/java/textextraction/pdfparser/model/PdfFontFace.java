@@ -17,11 +17,4 @@ public class PdfFontFace extends FontFace {
   public PdfFontFace(PdfFont font, float size) {
     super(font, size);
   }
-
-  // ==============================================================================================
-
-  @Override
-  public String toString() {
-    return "PdfFontFace(" + this.font + ", " + this.fontSize + ")";
-  }
 }

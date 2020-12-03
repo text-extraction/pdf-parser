@@ -41,11 +41,4 @@ public class PdfPosition extends Position {
   public PdfPosition(PdfPage page, Point point1, Point point2) {
     super(page, point1, point2);
   }
-
-  // ==============================================================================================
-
-  @Override
-  public String toString() {
-    return "PdfPosition(page: " + getPage() + ", rect: " + getRectangle() + ")";
-  }
 }
